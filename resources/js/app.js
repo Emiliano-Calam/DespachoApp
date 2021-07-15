@@ -18,13 +18,16 @@ window.Vue = require('vue');
  *
  * Eg. ./components/EPxampleComponent.vue -> <example-component></example-component>
  */
-
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
-
-Vue.component('ClientesmodalComponent', require('./components/clientesmodalComponent.vue'));
+/*
+ const files = require.context('./', true, /\.vue$/i);
+ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+*/
+Vue.component('clientesmodalcomponent', require('./components/clientesmodalComponent.vue').default);
 //Vue.component('filtrostables-component', require('./components/filtrostablesComponent.vue'));
-Vue.component('TimeworckComponent', require('./components/timeworckComponent.vue'));
+//Vue.component('timeworckcomponent', require('./components/timeworckComponent.vue').default);
+//const ClientesmodalComponent =  require('./components/clientesmodalComponent.vue');
+//const TimeworckComponent = require('./components/timeworckComponent.vue');
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

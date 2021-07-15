@@ -168,7 +168,7 @@
             </div>
           </div>
         </div>
-       <ClientesmodalComponent> </ClientesmodalComponent>
+       <clientesmodalcomponent> </clientesmodalcomponent>
     @endsection
     @section('appvue')
     <script src="{{ asset('js/app.js') }}"></script>

@@ -225,7 +225,7 @@
           </div>
         </div>
         <!-- /top navigation -->
-
+      
         <!-- container -->
         <div id="app">
         @yield('content')

@@ -208,7 +208,8 @@ $anio_actual= date('Y');
 
                       </div> 
                         <div class="col-md-4">
-                          <button type="submit" class="btn btn-danger"> <span class="fa fa-ban" aria-hidden="true"></span> Cancel</button>
+                        <a id="Cancelar" href="javascript:void(0);" class="btn btn-primary"  > <span class="fa fa-floppy-o" aria-hidden="true"></span> <?php echo (isset($result['id']) && $result['id'] >0) ? 'NEW': 'NEW' ?></a>
+                          <button  type="submit" class="btn btn-danger"> <span class="fa fa-ban" aria-hidden="true"></span> Cancel</button>
                           @if(isset($result['estatus']) && $result['estatus'] !='CONCLUIDO')
                           <a id="send" href="javascript:void(0);" class="btn btn-primary"  > <span class="fa fa-floppy-o" aria-hidden="true"></span> <?php echo (isset($result['id']) && $result['id'] >0) ? 'Guardar': 'Guardar' ?></a>
                           <a href="javascript:void(0);" id="Concluir" class="btn btn-success" disabled> <span class="fa fa-play" aria-hidden="true"></span> <?php echo (isset($result['id']) && $result['id'] >0) ? 'Concluir': 'Concluir' ?></a>
@@ -228,9 +229,11 @@ $anio_actual= date('Y');
             </div>
           </div>
         </div>
+        <!-- templetes -->
         @include('modal.add_tareas_new_modal')
-        <ClientesmodalComponent> </ClientesmodalComponent>
-        <TimeworckComponent></TimeworckComponent>
+        @include('modal.clientes_modal')
+        <timeworckComponent></timeworckComponent>
+        <!-- end templetes -->
     @endsection
     
     @section('appvue')

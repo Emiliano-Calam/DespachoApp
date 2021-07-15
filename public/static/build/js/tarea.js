@@ -45,7 +45,7 @@ $('#fecha').daterangepicker({
 $( ".cliente" ).click(function() {
     // alert($(this).data('tipo'));
     loadtable($(this).data('tipo'));
-   $('#exampleModal').modal('show')
+   $('#exampleModal').modal('show');
    var paren= $("#datatable-clientes_length").parent('.col-sm-6').addClass('col-sm-5');
    paren1 = $("#datatable-clientes_filter").parent('.col-sm-6').addClass('col-sm-5');
    $("#datatable-clientes_length").parent('col-sm-5').removeClass('.col-sm-6');
@@ -236,6 +236,10 @@ $('#send').on('click', function(event){
          
     }
     return false;
+});
+$('#Cancelar').on('click', function(event){
+  $('#NewTareasModal').modal('show');
+  //alert('okok');
 });
 
 $( "#cmbmovimiento" ).change(function() {
